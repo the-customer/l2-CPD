@@ -1,0 +1,269 @@
+:root{
+    --color-one: #66626286;
+    --color-two:#272525;
+    --color-three:#727070;
+    --blue-color: rgb(66, 183, 237);
+    --orange-color:#F68C00;
+    --green-color:rgb(11, 170, 14);
+    --red-color:#ED2B2F;
+    --color-four:#d9f7f55d;
+    --error-color:rgb(255, 144, 144);
+    --test-color:#4e4c4cd4;
+    --color-gray:rgba(255, 255, 255,0.5);
+    --text-color:white;
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--test-color);
+}
+
+
+.container{
+    background-color: var(--color-two);
+    width: 65%;
+    height: 70%;
+    color: var(--test-color);
+    border-radius: 15px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.sideBar{
+    background-color: var(--color-one);
+    flex: 1;
+    display: inline-block;
+}
+
+.sideBar input{
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid var(--color-one);
+    width: 90%;
+    margin-top: 10px;
+    background-color: var(--color-gray);
+}
+
+.sideBar input:focus{
+    outline: none;
+    border: 2px solid var(--blue-color);
+}
+
+.content{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.input2{
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.input select{
+    width: 90%;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.input select:focus{
+    outline: 0;
+    border: 2px solid var(--orange-color);
+}
+
+.title{
+    flex: 1;
+    margin-left: 10px;
+    border-bottom: 1px solid var(--color-one);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.title .sm-r, .sm-l{
+    position: absolute;
+    bottom: 5px;
+    color: var(--text-color);
+}
+
+.title .sm-l{
+    left: var(--orange-color);
+}
+
+.title .sm-r{
+    right: 10px;
+}
+
+.tasks{
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.day{
+    display: flex;
+    flex: 1;
+}
+
+.day-name{
+    padding: 10px;
+    border: 0.5px solid var(--color-three);
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1px;
+    border-radius: 15px 0 0 15px;
+}
+
+.day-name .add-cours{
+    font-size: 25px;
+    color: var(--green-color);
+    cursor: pointer;
+    display: flex;
+}
+
+.hours{
+    display: flex;
+    align-items: center;
+}
+
+.hour-name {
+    padding: 10px;
+    border: 1px solid var(--color-three);
+    flex:1;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 15px 0 0 15px;
+}
+
+.hour-content{
+    flex: 6;
+    display: flex;
+    color: var(--text-color);
+}
+
+.hour-content span, .cours{
+    flex: 1;
+    margin-left: 3px;
+}
+
+.cours {
+    background-color: var(--blue-color);
+    position:absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.day-content{
+    flex: 6;
+    margin-right: 10px;
+    border-bottom: 1px solid var(--color-two);
+    border-top: 1px solid var(--color-two);
+    position: relative;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--color-four);
+    /* margin: 1px; */
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card{
+    background-color: var(--color-gray);
+    width: 49%;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card .icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid none;
+}
+
+.card .icon img{
+    width: 50%;
+}
+
+.card *{
+    position: absolute;
+}
+
+.card span:nth-child(1){
+    right: 10px;
+    top: 10px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.card span:nth-child(3){
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+}
+
+.card span:nth-child(4){
+    bottom: 10px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.blue-color{
+    background-color: var(--blue-color);
+}
+.my-color{
+    background-color: var(--color-two);
+}
+.green-color{
+    background-color: var(--green-color);
+}
+.red-color{
+    background-color: var(--red-color);
+}
+.orange-color{
+    background-color: var(--orange-color);
+}
+.gray-color{
+    background-color: var(--color-one);
+}
+
